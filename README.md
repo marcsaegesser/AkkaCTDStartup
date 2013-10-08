@@ -1,6 +1,9 @@
 AkkaCTDStartup
 ========
 
+>_Update_:  In case anyone stumbles across this, the AKKA ticket for this is [#3664](https://www.assembla.com/spaces/akka/tickets/3644-actor-using-callingthreaddispatcher-runs-on-default-dispatcher-thread#/activity/ticket:) and
+the response was essentially "That's the way it is supposed to work."  _Sigh._
+
 This small project demonstrates a problem I've encountered writing actor Unit tests.
 If I create an ActorRef using the CallingThreadDispatcher and then send a message to
 the actor immediately after creation it actually runs using the default-dispatcher
